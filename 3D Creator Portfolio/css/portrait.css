@@ -1,0 +1,30 @@
+.hero-portrait-inner { transition: transform 0.6s ease-in-out; will-change: transform; }
+.hero-portrait-inner { position: relative; }
+
+/* fade-in must win over the magnet transition */
+.hero-portrait-inner.fade-in {
+  transition:
+    opacity var(--fade-dur, 0.7s) cubic-bezier(0.25, 0.1, 0.25, 1) var(--fade-delay, 0s),
+    transform var(--fade-dur, 0.7s) cubic-bezier(0.25, 0.1, 0.25, 1) var(--fade-delay, 0s);
+}
+
+.hero-portrait-inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#faceGl { position: absolute; left: -35%; top: -35%; width: 170%; height: 170%; pointer-events: none; }
+#faceProps { position: absolute; inset: 0; pointer-events: none; }
+#faceFly, #faceHand { position: absolute; opacity: 0; transition: opacity .2s; transform: translate(-50%, -50%); }
+#faceFly { width: 6%; fill: #111; }
+#faceFly .wing { fill: rgba(220, 235, 255, .7); transform-origin: 16px 15px; animation: flap .05s linear infinite alternate; }
+#faceFly .wing.r { animation-direction: alternate-reverse; }
+@keyframes flap { from { transform: rotate(-16deg); } to { transform: rotate(16deg); } }
+#faceHand { width: 11%; fill: #fff; stroke: #0c0c0c; stroke-width: 1.4; stroke-linejoin: round; }
+#faceHand .grab { display: none; }
+#faceHand.shut .open { display: none; }
+#faceHand.shut .grab { display: block; }

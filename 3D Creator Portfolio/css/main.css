@@ -1,0 +1,9 @@
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./components.css');
+@import url('./sections/hero.css');
+@import url('./sections/marquee.css');
+@import url('./sections/about.css');
+@import url('./sections/services.css');
+@import url('./sections/projects.css');
+@import url('./portrait.css');

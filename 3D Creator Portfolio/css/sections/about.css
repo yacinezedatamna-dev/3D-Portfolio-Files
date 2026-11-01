@@ -1,0 +1,67 @@
+.about {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.25rem;
+  overflow: hidden;
+  background: #0C0C0C;
+}
+@media (min-width: 640px) { .about { padding: 5rem 2rem; } }
+@media (min-width: 768px) { .about { padding: 5rem 2.5rem; } }
+
+.about-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+.about-heading { text-align: center; font-size: clamp(3rem, 12vw, 160px); }
+@media (min-width: 640px) { .about-inner { gap: 5rem; } }
+@media (min-width: 768px) { .about-inner { gap: 6rem; } }
+
+.about-text {
+  color: #D7E2EA;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.625;
+  max-width: 560px;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  margin-top: -1rem;
+}
+
+/* char reveal */
+.word { display: inline-block; white-space: nowrap; }
+.ch { position: relative; display: inline-block; white-space: pre; }
+.ch-ph { visibility: hidden; }
+.ch-an { position: absolute; left: 0; top: 0; opacity: 0.2; will-change: opacity; }
+
+/* decorative 3D objects */
+.about-deco {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.deco-moon  { width: 120px; top: 4%; left: 1%; }
+.deco-p59   { width: 100px; bottom: 8%; left: 3%; }
+.deco-lego  { width: 120px; top: 4%; right: 1%; }
+.deco-group { width: 130px; bottom: 8%; right: 3%; }
+
+@media (min-width: 640px) {
+  .deco-moon  { width: 160px; left: 2%; }
+  .deco-p59   { width: 140px; left: 6%; }
+  .deco-lego  { width: 160px; right: 2%; }
+  .deco-group { width: 170px; right: 6%; }
+}
+@media (min-width: 768px) {
+  .deco-moon  { width: 210px; left: 4%; }
+  .deco-p59   { width: 180px; left: 10%; }
+  .deco-lego  { width: 210px; right: 4%; }
+  .deco-group { width: 220px; right: 10%; }
+}

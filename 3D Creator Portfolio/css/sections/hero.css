@@ -1,0 +1,88 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+  background: #0C0C0C;
+}
+
+/* Navbar */
+.nav {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0;
+  color: #D7E2EA;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+.nav a { transition: opacity 0.2s ease; }
+.nav a:hover { opacity: 0.7; }
+@media (min-width: 768px) { .nav { padding: 2rem 2.5rem 0; font-size: 1.125rem; } }
+@media (min-width: 1024px) { .nav { font-size: 1.4rem; } }
+
+/* Heading */
+.hero-heading-wrap {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-h1 {
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 14vw;
+  margin-top: 1.5rem;
+}
+@media (min-width: 640px) { .hero-h1 { font-size: 15vw; margin-top: 1rem; } }
+@media (min-width: 768px) { .hero-h1 { font-size: 16vw; margin-top: -1.25rem; } }
+@media (min-width: 1024px) { .hero-h1 { font-size: 17.5vw; } }
+
+/* Bottom bar */
+.hero-bottom {
+  position: relative;
+  z-index: 20;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 0 1.5rem 1.75rem;
+}
+.hero-sub {
+  color: #D7E2EA;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  line-height: 1.375;
+  font-size: clamp(0.75rem, 1.4vw, 1.5rem);
+  max-width: 160px;
+}
+@media (min-width: 640px) { .hero-bottom { padding: 0 1.5rem 2rem; } .hero-sub { max-width: 220px; } }
+@media (min-width: 768px) { .hero-bottom { padding: 0 2.5rem 2.5rem; } .hero-sub { max-width: 260px; } }
+
+/* Portrait wrapper */
+.hero-portrait-wrap {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  width: 400px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  touch-action: pan-y;
+}
+@media (min-width: 640px) { .hero-portrait-wrap { width: 500px; } }
+@media (min-width: 768px) { .hero-portrait-wrap { width: 600px; } }
+@media (min-width: 1024px) { .hero-portrait-wrap { width: clamp(640px, 78vh, 46vw); } }

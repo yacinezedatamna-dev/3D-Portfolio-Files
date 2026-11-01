@@ -1,0 +1,7 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0C0C0C; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Kanit', sans-serif; color: #D7E2EA; overflow-x: clip; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { font: inherit; cursor: pointer; border: 0; background: none; }
